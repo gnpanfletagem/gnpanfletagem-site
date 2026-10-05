@@ -3,273 +3,1090 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G&N Panfletagem - Divulgando o seu sucesso!</title>
-    <meta name="description" content="G&N Panfletagem - Especialista em panfletagem física e digital. Levamos sua mensagem mais longe, no digital e nas ruas!">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Panfletagem em Curitiba e RMC | GN Panfletagem</title>
+    <meta name="description" content="Distribuição profissional de panfletos em Curitiba e toda a Região Metropolitana. Porta a porta, pontos estratégicos e grandes volumes. Solicite seu orçamento.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b1220">
+
+    <link rel="canonical" href="https://gnpanfletagem.github.io/gnpanfletagem-site/">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Panfletagem em Curitiba e RMC | GN Panfletagem">
+    <meta property="og:description" content="Distribuição profissional de panfletos em Curitiba e toda a Região Metropolitana.">
+    <meta property="og:url" content="https://gnpanfletagem.github.io/gnpanfletagem-site/">
+    <meta property="og:image" content="https://gnpanfletagem.github.io/gnpanfletagem-site/img/hero-bg.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "GN Panfletagem",
+      "url": "https://gnpanfletagem.github.io/gnpanfletagem-site/",
+      "logo": "https://gnpanfletagem.github.io/gnpanfletagem-site/img/logo.png",
+      "image": "https://gnpanfletagem.github.io/gnpanfletagem-site/img/hero-bg.jpg",
+      "telephone": "+55 41 98441-0350",
+      "email": "contatogndivulgacao@gmail.com",
+      "description": "Empresa especializada em panfletagem e distribuição profissional de materiais publicitários em Curitiba e toda a Região Metropolitana de Curitiba.",
+      "areaServed": [
+        "Curitiba",
+        "Região Metropolitana de Curitiba"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/gnpanfletagem/",
+        "https://www.linkedin.com/in/gn-panfletagem-a538413a5/"
+      ]
+    }
+    </script>
+
+    <style>
+        :root{
+            --bg:#07101d;
+            --bg-2:#0b1627;
+            --card:#101d31;
+            --surface:#ffffff;
+            --surface-2:#f5f7fa;
+            --text:#101828;
+            --muted:#667085;
+            --light:#f8fafc;
+            --white:#ffffff;
+            --accent:#16c784;
+            --accent-dark:#0fa66d;
+            --accent-soft:#e8fbf3;
+            --line:#e4e7ec;
+            --shadow:0 18px 50px rgba(16,24,40,.12);
+            --radius:20px;
+            --container:1180px;
+        }
+
+        *{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{
+            font-family:"Inter",sans-serif;
+            color:var(--text);
+            background:var(--surface);
+            line-height:1.6;
+            -webkit-font-smoothing:antialiased;
+        }
+        img{max-width:100%;display:block}
+        a{text-decoration:none;color:inherit}
+        button,input,select,textarea{font:inherit}
+        .container{width:min(var(--container),calc(100% - 40px));margin:0 auto}
+        .eyebrow{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            padding:8px 12px;
+            border-radius:999px;
+            font-size:.82rem;
+            font-weight:800;
+            letter-spacing:.03em;
+            text-transform:uppercase;
+            background:var(--accent-soft);
+            color:#06734a;
+        }
+        .section{padding:92px 0}
+        .section.alt{background:var(--surface-2)}
+        .section.dark{background:var(--bg);color:var(--white)}
+        .section-heading{max-width:760px;margin-bottom:42px}
+        .section-heading.center{margin-left:auto;margin-right:auto;text-align:center}
+        .section-heading h2{
+            font-family:"Montserrat",sans-serif;
+            font-size:clamp(2rem,4vw,3.2rem);
+            line-height:1.08;
+            margin:14px 0 14px;
+            letter-spacing:-.035em;
+        }
+        .section-heading p{font-size:1.05rem;color:var(--muted)}
+        .dark .section-heading p{color:#b8c3d4}
+
+        .header{
+            position:sticky;
+            top:0;
+            z-index:1000;
+            background:rgba(7,16,29,.94);
+            backdrop-filter:blur(14px);
+            border-bottom:1px solid rgba(255,255,255,.08);
+        }
+        .navbar{
+            width:min(var(--container),calc(100% - 40px));
+            margin:0 auto;
+            min-height:76px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:24px;
+        }
+        .brand{display:flex;align-items:center;gap:12px}
+        .brand img{height:48px;width:auto}
+        .nav-menu{display:flex;list-style:none;gap:26px;align-items:center}
+        .nav-link{color:#d8e0eb;font-weight:600;font-size:.95rem}
+        .nav-link:hover{color:var(--white)}
+        .nav-cta,.btn{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:9px;
+            border:none;
+            border-radius:12px;
+            font-weight:800;
+            cursor:pointer;
+            transition:.2s ease;
+        }
+        .nav-cta{
+            background:var(--accent);
+            color:#04120d;
+            padding:12px 18px;
+        }
+        .nav-cta:hover,.btn-primary:hover{transform:translateY(-1px);background:#1ed892}
+        .hamburger{display:none;background:none;border:0;color:white;font-size:1.6rem}
+
+        .hero{
+            background:
+                radial-gradient(circle at 80% 15%,rgba(22,199,132,.20),transparent 34%),
+                linear-gradient(135deg,#07101d 0%,#0d1c31 100%);
+            color:var(--white);
+            padding:88px 0 72px;
+            overflow:hidden;
+        }
+        .hero-grid{
+            display:grid;
+            grid-template-columns:1.06fr .94fr;
+            gap:58px;
+            align-items:center;
+        }
+        .hero h1{
+            font-family:"Montserrat",sans-serif;
+            font-size:clamp(2.6rem,5.4vw,4.7rem);
+            line-height:.98;
+            letter-spacing:-.055em;
+            margin:18px 0 22px;
+        }
+        .hero h1 span{color:#54eba9}
+        .hero-copy{
+            color:#c9d2df;
+            font-size:1.14rem;
+            max-width:690px;
+            margin-bottom:28px;
+        }
+        .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+        .btn{padding:15px 20px;min-height:52px}
+        .btn-primary{background:var(--accent);color:#04120d}
+        .btn-secondary{background:rgba(255,255,255,.08);color:var(--white);border:1px solid rgba(255,255,255,.16)}
+        .btn-secondary:hover{background:rgba(255,255,255,.13)}
+        .btn-dark{background:var(--bg);color:var(--white)}
+        .btn-outline{border:1px solid var(--line);background:var(--white);color:var(--text)}
+        .hero-trust{display:flex;gap:12px;flex-wrap:wrap}
+        .trust-pill{
+            display:flex;align-items:center;gap:8px;
+            color:#d9e1ec;
+            font-size:.9rem;
+            font-weight:600;
+        }
+        .trust-pill i{color:#54eba9}
+        .hero-media{
+            position:relative;
+            border-radius:28px;
+            overflow:hidden;
+            min-height:520px;
+            box-shadow:0 30px 80px rgba(0,0,0,.34);
+            border:1px solid rgba(255,255,255,.08);
+        }
+        .hero-media img{
+            width:100%;
+            height:100%;
+            min-height:520px;
+            object-fit:cover;
+        }
+        .hero-media:after{
+            content:"";
+            position:absolute;
+            inset:0;
+            background:linear-gradient(to top,rgba(7,16,29,.62),transparent 45%);
+        }
+        .hero-badge{
+            position:absolute;
+            z-index:2;
+            left:22px;
+            bottom:22px;
+            right:22px;
+            background:rgba(7,16,29,.88);
+            border:1px solid rgba(255,255,255,.12);
+            backdrop-filter:blur(10px);
+            border-radius:16px;
+            padding:17px 18px;
+        }
+        .hero-badge strong{display:block;font-size:1.02rem}
+        .hero-badge span{color:#c4cfdd;font-size:.9rem}
+
+        .proof-strip{
+            background:#0c1728;
+            color:white;
+            border-top:1px solid rgba(255,255,255,.06);
+            border-bottom:1px solid rgba(255,255,255,.06);
+        }
+        .proof-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+        }
+        .proof-item{
+            padding:22px 24px;
+            display:flex;
+            gap:12px;
+            align-items:center;
+            justify-content:center;
+            border-right:1px solid rgba(255,255,255,.08);
+        }
+        .proof-item:last-child{border-right:0}
+        .proof-item i{color:#54eba9;font-size:1.25rem}
+        .proof-item strong{font-size:.95rem}
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:18px;
+        }
+        .card{
+            background:var(--white);
+            border:1px solid var(--line);
+            border-radius:var(--radius);
+            padding:26px;
+            box-shadow:0 10px 30px rgba(16,24,40,.05);
+        }
+        .card-icon{
+            width:48px;height:48px;
+            border-radius:14px;
+            display:grid;place-items:center;
+            background:var(--accent-soft);
+            color:#06734a;
+            margin-bottom:20px;
+            font-size:1.25rem;
+        }
+        .card h3{font-size:1.08rem;margin-bottom:10px}
+        .card p{color:var(--muted);font-size:.95rem}
+        .card .mini-link{
+            display:inline-flex;
+            margin-top:17px;
+            color:#06734a;
+            font-weight:800;
+            font-size:.92rem;
+            gap:7px;
+            align-items:center;
+        }
+
+        .process-grid{
+            display:grid;
+            grid-template-columns:repeat(5,1fr);
+            gap:14px;
+            counter-reset:steps;
+        }
+        .step{
+            background:var(--card);
+            border:1px solid rgba(255,255,255,.08);
+            border-radius:18px;
+            padding:24px 20px;
+        }
+        .step-num{
+            width:38px;height:38px;
+            display:grid;place-items:center;
+            border-radius:50%;
+            background:var(--accent);
+            color:#04120d;
+            font-weight:900;
+            margin-bottom:18px;
+        }
+        .step h3{font-size:1rem;margin-bottom:8px}
+        .step p{font-size:.9rem;color:#b8c3d4}
+
+        .coverage-grid{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:48px;
+            align-items:center;
+        }
+        .coverage-box{
+            padding:30px;
+            background:linear-gradient(135deg,#0b1627,#102239);
+            border-radius:26px;
+            color:white;
+            box-shadow:var(--shadow);
+        }
+        .coverage-box h3{font-size:1.55rem;margin-bottom:10px}
+        .coverage-box p{color:#c7d0dc;margin-bottom:20px}
+        .coverage-list{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:10px 16px;
+        }
+        .coverage-list span{display:flex;gap:8px;align-items:center;font-size:.92rem}
+        .coverage-list i{color:#54eba9}
+        .coverage-note{
+            margin-top:20px;
+            padding-top:18px;
+            border-top:1px solid rgba(255,255,255,.10);
+            font-size:.9rem;color:#aebbd0;
+        }
+
+        .split{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:52px;
+            align-items:center;
+        }
+        .split-media{
+            border-radius:26px;
+            overflow:hidden;
+            min-height:470px;
+            box-shadow:var(--shadow);
+        }
+        .split-media img{width:100%;height:100%;min-height:470px;object-fit:cover}
+        .checks{display:grid;gap:14px;margin:24px 0}
+        .check{
+            display:flex;gap:12px;align-items:flex-start
+        }
+        .check i{
+            width:30px;height:30px;flex:0 0 30px;
+            display:grid;place-items:center;
+            background:var(--accent-soft);
+            color:#06734a;
+            border-radius:50%;
+            margin-top:2px;
+        }
+        .check strong{display:block;margin-bottom:2px}
+        .check span{color:var(--muted);font-size:.94rem}
+
+        .gallery{
+            display:grid;
+            grid-template-columns:1.2fr .8fr .8fr;
+            gap:16px;
+        }
+        .gallery-card{
+            position:relative;
+            min-height:300px;
+            border-radius:22px;
+            overflow:hidden;
+            background:#d9dee7;
+        }
+        .gallery-card:first-child{min-height:420px}
+        .gallery-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+        .gallery-card:after{
+            content:"";
+            position:absolute;inset:0;
+            background:linear-gradient(to top,rgba(0,0,0,.6),transparent 56%);
+        }
+        .gallery-copy{
+            position:absolute;z-index:2;bottom:18px;left:18px;right:18px;color:white
+        }
+        .gallery-copy strong{display:block}
+        .gallery-copy span{font-size:.88rem;color:#e0e7ef}
+
+        .google-box{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:24px;
+            padding:28px 30px;
+            border:1px solid var(--line);
+            border-radius:22px;
+            background:var(--white);
+        }
+        .google-box h3{font-size:1.25rem}
+        .google-box p{color:var(--muted);margin-top:4px}
+
+        .quote-section{
+            background:linear-gradient(135deg,#07101d,#10233b);
+            color:white;
+        }
+        .quote-grid{
+            display:grid;
+            grid-template-columns:.85fr 1.15fr;
+            gap:50px;
+            align-items:start;
+        }
+        .quote-copy h2{
+            font-family:"Montserrat",sans-serif;
+            font-size:clamp(2.1rem,4vw,3.4rem);
+            line-height:1.05;
+            letter-spacing:-.04em;
+            margin:14px 0 18px;
+        }
+        .quote-copy p{color:#c3cedc}
+        .quote-mini{display:grid;gap:12px;margin-top:26px}
+        .quote-mini span{display:flex;align-items:center;gap:10px;color:#dde5ef}
+        .quote-mini i{color:#54eba9}
+        .quote-form{
+            background:white;
+            color:var(--text);
+            padding:30px;
+            border-radius:24px;
+            box-shadow:0 30px 70px rgba(0,0,0,.25);
+        }
+        .quote-form h3{font-size:1.35rem;margin-bottom:6px}
+        .quote-form .lead{color:var(--muted);font-size:.94rem;margin-bottom:20px}
+        .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+        .form-group{display:grid;gap:7px}
+        .form-group.full{grid-column:1/-1}
+        .form-group label{font-size:.84rem;font-weight:800;color:#344054}
+        .form-group input,.form-group select,.form-group textarea{
+            width:100%;
+            border:1px solid #d0d5dd;
+            border-radius:12px;
+            padding:13px 14px;
+            outline:none;
+            background:white;
+            color:var(--text);
+        }
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+            border-color:#16c784;
+            box-shadow:0 0 0 4px rgba(22,199,132,.12);
+        }
+        .form-note{font-size:.78rem;color:#667085;margin-top:12px}
+
+        .faq{display:grid;gap:12px;max-width:900px;margin:0 auto}
+        details{
+            border:1px solid var(--line);
+            border-radius:16px;
+            background:white;
+            padding:0 20px;
+        }
+        summary{
+            cursor:pointer;
+            list-style:none;
+            font-weight:800;
+            padding:19px 0;
+            display:flex;
+            justify-content:space-between;
+            gap:20px;
+        }
+        summary::-webkit-details-marker{display:none}
+        summary:after{content:"+";font-size:1.35rem;color:#667085}
+        details[open] summary:after{content:"–"}
+        details p{padding:0 0 20px;color:var(--muted)}
+
+        .footer{
+            background:#050b13;
+            color:#c4cedb;
+            padding:58px 0 24px;
+        }
+        .footer-grid{
+            display:grid;
+            grid-template-columns:1.3fr .7fr .9fr;
+            gap:42px;
+            margin-bottom:38px;
+        }
+        .footer-logo{height:56px;width:auto;margin-bottom:16px}
+        .footer h4{color:white;margin-bottom:14px}
+        .footer ul{list-style:none;display:grid;gap:9px}
+        .footer a:hover{color:white}
+        .footer-bottom{
+            border-top:1px solid rgba(255,255,255,.08);
+            padding-top:20px;
+            display:flex;
+            justify-content:space-between;
+            gap:20px;
+            font-size:.86rem;
+        }
+
+        .floating-wa{
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            z-index:999;
+            width:58px;height:58px;
+            border-radius:50%;
+            background:#25D366;
+            color:white;
+            display:grid;place-items:center;
+            box-shadow:0 12px 30px rgba(0,0,0,.24);
+            font-size:1.7rem;
+        }
+
+        @media(max-width:980px){
+            .nav-menu{display:none;position:absolute;top:76px;left:0;right:0;background:#07101d;padding:20px;flex-direction:column;border-top:1px solid rgba(255,255,255,.08)}
+            .nav-menu.open{display:flex}
+            .navbar>.nav-cta{display:none}
+            .hamburger{display:block}
+            .hero-grid,.coverage-grid,.split,.quote-grid{grid-template-columns:1fr}
+            .hero-media{min-height:420px}
+            .hero-media img{min-height:420px}
+            .cards{grid-template-columns:1fr 1fr}
+            .process-grid{grid-template-columns:1fr 1fr}
+            .gallery{grid-template-columns:1fr 1fr}
+            .gallery-card:first-child{grid-column:1/-1}
+            .footer-grid{grid-template-columns:1fr 1fr}
+            .proof-grid{grid-template-columns:1fr}
+            .proof-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}
+            .proof-item:last-child{border-bottom:0}
+        }
+
+        @media(max-width:640px){
+            .container,.navbar{width:min(100% - 28px,var(--container))}
+            .section{padding:68px 0}
+            .hero{padding:62px 0 50px}
+            .hero h1{font-size:2.55rem}
+            .hero-actions{display:grid}
+            .hero-actions .btn{width:100%}
+            .hero-media,.hero-media img{min-height:330px}
+            .cards,.process-grid,.gallery,.footer-grid,.form-grid{grid-template-columns:1fr}
+            .gallery-card:first-child{grid-column:auto;min-height:300px}
+            .coverage-list{grid-template-columns:1fr}
+            .google-box{align-items:flex-start;flex-direction:column}
+            .footer-bottom{flex-direction:column}
+            .quote-form{padding:22px}
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Header -->
     <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="img/logo.png" alt="G&N Panfletagem" class="logo">
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#servicos" class="nav-link">Serviços</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#sobre" class="nav-link">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contato" class="nav-link">Contato</a>
-                    </li>
-                </ul>
-                <div class="nav-cta">
-                    <a href="https://wa.me/5541984410350" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                        WhatsApp
-                    </a>
-                </div>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
+        <nav class="navbar" aria-label="Navegação principal">
+            <a href="#inicio" class="brand" aria-label="GN Panfletagem - início">
+                <img src="img/logo.png" alt="GN Panfletagem">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a class="nav-link" href="#servicos">Serviços</a></li>
+                <li><a class="nav-link" href="#como-funciona">Como funciona</a></li>
+                <li><a class="nav-link" href="#cobertura">Cobertura</a></li>
+                <li><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li><a class="nav-link" href="#orcamento">Orçamento</a></li>
+            </ul>
+
+            <a class="nav-cta" href="https://wa.me/5541984410350?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20panfletagem." target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>
+                Solicitar orçamento
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Levamos sua mensagem mais longe, 
-                    <span class="highlight">no digital e nas ruas!</span>
-                </h1>
-                <p class="hero-subtitle">
-                    G&N Panfletagem – Divulgando o seu sucesso!
-                </p>
-                <div class="hero-buttons">
-                    <a href="#servicos" class="btn btn-primary">Saiba Mais</a>
-                    <a href="https://wa.me/5541984410350" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-whatsapp"></i>
-                        Fale Conosco
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow"><i class="fa-solid fa-location-dot"></i> Curitiba + toda a RMC</span>
+                    <h1>Panfletagem profissional em Curitiba e <span>toda a Região Metropolitana</span></h1>
+                    <p class="hero-copy">
+                        Distribuição de panfletos para empresas que precisam colocar sua marca nas ruas com organização, planejamento e acompanhamento da execução.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#orcamento">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Solicitar orçamento
+                        </a>
+                        <a class="btn btn-secondary" href="#como-funciona">
+                            Como funciona
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <span class="trust-pill"><i class="fa-solid fa-circle-check"></i> Operações planejadas</span>
+                        <span class="trust-pill"><i class="fa-solid fa-circle-check"></i> Equipes organizadas</span>
+                        <span class="trust-pill"><i class="fa-solid fa-circle-check"></i> Diferentes volumes</span>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <img src="img/hero-bg.jpg" alt="Equipe da GN Panfletagem realizando distribuição de panfletos">
+                    <div class="hero-badge">
+                        <strong>Distribuição profissional para campanhas de diferentes portes</strong>
+                        <span>Atendimento em Curitiba e em toda a Região Metropolitana.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="proof-strip" aria-label="Diferenciais rápidos">
+            <div class="container proof-grid">
+                <div class="proof-item">
+                    <i class="fa-solid fa-route"></i>
+                    <strong>Planejamento por região e objetivo</strong>
+                </div>
+                <div class="proof-item">
+                    <i class="fa-solid fa-people-group"></i>
+                    <strong>Equipe dimensionada para cada ação</strong>
+                </div>
+                <div class="proof-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <strong>Cobertura em Curitiba e toda a RMC</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="servicos">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Nossos serviços</span>
+                    <h2>Distribuição pensada para a necessidade da sua campanha</h2>
+                    <p>
+                        Estruturamos ações de panfletagem para empresas, comércios, imobiliárias, prestadores de serviços, eventos e campanhas promocionais.
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-house"></i></div>
+                        <h3>Panfletagem porta a porta</h3>
+                        <p>Distribuição em regiões residenciais e comerciais, com definição prévia das áreas de atuação.</p>
+                        <a class="mini-link" href="#orcamento">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+                        <h3>Pontos estratégicos</h3>
+                        <p>Ações em locais de circulação compatíveis com o objetivo da campanha e o público desejado.</p>
+                        <a class="mini-link" href="#orcamento">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-hand-holding"></i></div>
+                        <h3>Entrega direta em mãos</h3>
+                        <p>Equipes para distribuição de materiais ao público em áreas comerciais, eventos e locais definidos.</p>
+                        <a class="mini-link" href="#orcamento">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                        <h3>Grandes volumes</h3>
+                        <p>Estrutura para campanhas que exigem maior capacidade operacional e atuação em diferentes regiões.</p>
+                        <a class="mini-link" href="#orcamento">Pedir orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section dark" id="como-funciona">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="eyebrow">Como funciona</span>
+                    <h2>Da necessidade do cliente até a execução da campanha</h2>
+                    <p>Uma operação organizada começa antes de o primeiro panfleto chegar às ruas.</p>
+                </div>
+
+                <div class="process-grid">
+                    <article class="step">
+                        <div class="step-num">1</div>
+                        <h3>Entendemos a campanha</h3>
+                        <p>Quantidade, região, prazo e objetivo da ação.</p>
+                    </article>
+
+                    <article class="step">
+                        <div class="step-num">2</div>
+                        <h3>Planejamos a distribuição</h3>
+                        <p>Definimos a estrutura adequada para a demanda.</p>
+                    </article>
+
+                    <article class="step">
+                        <div class="step-num">3</div>
+                        <h3>Organizamos a equipe</h3>
+                        <p>Dimensionamento conforme volume e cobertura.</p>
+                    </article>
+
+                    <article class="step">
+                        <div class="step-num">4</div>
+                        <h3>Executamos a ação</h3>
+                        <p>Distribuição conforme o planejamento definido.</p>
+                    </article>
+
+                    <article class="step">
+                        <div class="step-num">5</div>
+                        <h3>Acompanhamos</h3>
+                        <p>Mais organização e segurança durante a execução.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="cobertura">
+            <div class="container coverage-grid">
+                <div>
+                    <span class="eyebrow">Área de atendimento</span>
+                    <div class="section-heading" style="margin-bottom:0">
+                        <h2>Curitiba e toda a Região Metropolitana</h2>
+                        <p>
+                            Atendemos campanhas em bairros específicos, múltiplas regiões de Curitiba e operações envolvendo diferentes municípios da RMC.
+                        </p>
+                    </div>
+
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <strong>Ações locais</strong>
+                                <span>Distribuição focada em bairros, regiões comerciais e áreas residenciais.</span>
+                            </div>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <strong>Operações metropolitanas</strong>
+                                <span>Campanhas planejadas para diferentes cidades da Região Metropolitana.</span>
+                            </div>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <strong>Cobertura sob medida</strong>
+                                <span>A região é definida conforme a necessidade e o objetivo de cada campanha.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-dark" href="#orcamento">Planejar minha distribuição</a>
+                </div>
+
+                <div class="coverage-box">
+                    <h3>Atuação metropolitana</h3>
+                    <p>Algumas das cidades que fazem parte da nossa área de atendimento:</p>
+                    <div class="coverage-list">
+                        <span><i class="fa-solid fa-location-dot"></i> Curitiba</span>
+                        <span><i class="fa-solid fa-location-dot"></i> São José dos Pinhais</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Colombo</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Araucária</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Fazenda Rio Grande</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Pinhais</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Piraquara</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Campo Largo</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Almirante Tamandaré</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Campina Grande do Sul</span>
+                    </div>
+                    <div class="coverage-note">
+                        E demais municípios da Região Metropolitana de Curitiba, conforme planejamento da campanha.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="diferenciais">
+            <div class="container split">
+                <div class="split-media">
+                    <img src="img/sobre-empresa.jpg" alt="Equipe da GN Panfletagem">
+                </div>
+
+                <div>
+                    <span class="eyebrow">Estrutura e confiança</span>
+                    <div class="section-heading" style="margin-bottom:0">
+                        <h2>Mais do que entregar panfletos: organizar uma operação</h2>
+                        <p>
+                            A GN trabalha para que cada campanha tenha uma execução compatível com seu volume, região e objetivo.
+                        </p>
+                    </div>
+
+                    <div class="checks">
+                        <div class="check">
+                            <i class="fa-solid fa-route"></i>
+                            <div>
+                                <strong>Planejamento de cobertura</strong>
+                                <span>Definição da operação de acordo com a região e a demanda.</span>
+                            </div>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <strong>Equipes organizadas</strong>
+                                <span>Estrutura dimensionada conforme a necessidade da ação.</span>
+                            </div>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            <div>
+                                <strong>Diferentes portes e volumes</strong>
+                                <span>Do atendimento local a campanhas com maior abrangência.</span>
+                            </div>
+                        </div>
+                        <div class="check">
+                            <i class="fa-solid fa-eye"></i>
+                            <div>
+                                <strong>Acompanhamento da execução</strong>
+                                <span>Mais organização e segurança para sua campanha.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary" href="#orcamento">Solicitar uma proposta</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="operacoes">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Operações reais</span>
+                    <h2>Panfletagem acontecendo de verdade</h2>
+                    <p>
+                        Use esta área para mostrar fotos reais das equipes, materiais, regiões atendidas e bastidores das ações da GN.
+                    </p>
+                </div>
+
+                <div class="gallery">
+                    <article class="gallery-card">
+                        <img src="img/hero-bg.jpg" alt="Operação de panfletagem da GN">
+                        <div class="gallery-copy">
+                            <strong>Distribuição em campo</strong>
+                            <span>Mostre aqui uma operação real da equipe.</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <img src="img/sobre-empresa.jpg" alt="Equipe GN Panfletagem">
+                        <div class="gallery-copy">
+                            <strong>Equipe GN</strong>
+                            <span>Organização e execução da campanha.</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="gallery-copy" style="color:#101828;top:22px;bottom:auto">
+                            <strong style="font-size:1.25rem">Próxima foto</strong>
+                            <span style="color:#667085">Substitua este bloco por uma imagem real de uma ação, material ou rota.</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="margin-top:22px">
+                    <a class="btn btn-outline" href="https://www.instagram.com/gnpanfletagem/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i>
+                        Ver mais trabalhos no Instagram
                     </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="img/hero-bg.jpg" alt="Panfletagem G&N" class="hero-img">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Serviços Section -->
-    <section id="servicos" class="servicos">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nossos Serviços</h2>
-                <p class="section-subtitle">Soluções completas em panfletagem física e digital</p>
-            </div>
-            
-            <div class="servicos-grid">
-                <!-- Panfletagem Física -->
-                <div class="servico-card">
-                    <div class="card-icon">
-                        <i class="fas fa-hand-holding"></i>
-                    </div>
-                    <h3 class="card-title">Panfletagem Física</h3>
-                    <ul class="card-features">
-                        <li><i class="fas fa-check"></i> Porta a porta</li>
-                        <li><i class="fas fa-check"></i> Semáforo</li>
-                        <li><i class="fas fa-check"></i> Entrega direta em mãos</li>
-                    </ul>
-                    <div class="card-price">
-                        <span class="price">R$ 199,90</span>
-                        <span class="price-desc">por 1.000 panfletos</span>
-                    </div>
-                    <a href="https://wa.me/5541984410350" target="_blank" class="btn btn-outline">Solicitar Orçamento</a>
-                </div>
-
-                <!-- Panfletagem Digital -->
-                <div class="servico-card featured">
-                    <div class="card-badge">Mais Popular</div>
-                    <div class="card-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="card-title">Panfletagem Digital</h3>
-                    <ul class="card-features">
-                        <li><i class="fas fa-check"></i> Envio em grupos locais no WhatsApp</li>
-                        <li><i class="fas fa-check"></i> Divulgação em redes sociais</li>
-                        <li><i class="fas fa-check"></i> Promoções programadas</li>
-                    </ul>
-                    <div class="digital-plans">
-                        <div class="plan">
-                            <span class="plan-name">Starter</span>
-                            <span class="plan-price">R$ 149</span>
-                        </div>
-                        <div class="plan">
-                            <span class="plan-name">Profissional</span>
-                            <span class="plan-price">R$ 249</span>
-                        </div>
-                        <div class="plan">
-                            <span class="plan-name">Premium</span>
-                            <span class="plan-price">R$ 399</span>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/5541984410350" target="_blank" class="btn btn-primary">Escolher Plano</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre Section -->
-    <section id="sobre" class="sobre">
-        <div class="container">
-            <div class="sobre-content">
-                <div class="sobre-text">
-                    <h2 class="section-title">Sobre a G&N</h2>
-                    <p class="sobre-description">
-                        A G&N é especialista em panfletagem física e digital. Contamos com experiência, 
-                        seriedade e foco em resultados para divulgar seu negócio!
+        <section class="section" id="sobre">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Sobre a GN</span>
+                    <h2>Distribuição profissional de materiais publicitários</h2>
+                    <p>
+                        A GN Panfletagem é especializada em panfletagem e distribuição profissional de materiais publicitários em Curitiba e em toda a Região Metropolitana. Atendemos empresas, comércios, imobiliárias, prestadores de serviços, eventos e campanhas promocionais com operações planejadas conforme região, volume e objetivo de cada ação.
                     </p>
-                    <div class="sobre-features">
-                        <div class="feature">
-                            <i class="fas fa-award"></i>
-                            <div>
-                                <h4>Experiência Comprovada</h4>
-                                <p>Anos de mercado com resultados consistentes</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-target"></i>
-                            <div>
-                                <h4>Foco em Resultados</h4>
-                                <p>Estratégias direcionadas para o seu público</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-handshake"></i>
-                            <div>
-                                <h4>Seriedade e Compromisso</h4>
-                                <p>Profissionalismo em cada projeto</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="sobre-image">
-                    <img src="img/sobre-empresa.jpg" alt="Equipe G&N Panfletagem" class="sobre-img">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contato Section -->
-    <section id="contato" class="contato">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Entre em Contato</h2>
-                <p class="section-subtitle">Pronto para divulgar seu negócio? Fale conosco!</p>
-            </div>
-            
-            <div class="contato-content">
-                <div class="contato-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>WhatsApp</h4>
-                            <p>(41) 98441-0350</p>
-                            <a href="https://wa.me/5541984410350" target="_blank" class="contact-link">Enviar mensagem</a>
-                        </div>
+                <div class="google-box">
+                    <div>
+                        <h3>Confira a presença da GN no Google</h3>
+                        <p>Veja informações públicas, fotos e avaliações da empresa.</p>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>E-mail</h4>
-                            <p>contatogndivulgacao@gmail.com</p>
-                            <a href="mailto:contatogndivulgacao@gmail.com" class="contact-link">Enviar e-mail</a>
-                        </div>
+                    <a class="btn btn-dark" href="https://www.google.com/search?q=GN+Panfletagem+Curitiba" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-google"></i>
+                        Ver no Google
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section quote-section" id="orcamento">
+            <div class="container quote-grid">
+                <div class="quote-copy">
+                    <span class="eyebrow">Solicite seu orçamento</span>
+                    <h2>Tem materiais para distribuir?</h2>
+                    <p>
+                        Informe os principais dados da sua campanha e abra uma conversa já organizada com nossa equipe no WhatsApp.
+                    </p>
+
+                    <div class="quote-mini">
+                        <span><i class="fa-solid fa-circle-check"></i> Atendimento em Curitiba e toda a RMC</span>
+                        <span><i class="fa-solid fa-circle-check"></i> Orçamento conforme volume, região e tipo de ação</span>
+                        <span><i class="fa-solid fa-circle-check"></i> Atendimento direto pelo WhatsApp</span>
                     </div>
                 </div>
-                
-                <div class="contato-form">
-                    <form class="contact-form" id="contactForm">
+
+                <form class="quote-form" id="quoteForm">
+                    <h3>Conte sobre sua campanha</h3>
+                    <p class="lead">Preencha o que já souber. Se ainda não tiver alguma informação, nossa equipe pode orientar.</p>
+
+                    <div class="form-grid">
                         <div class="form-group">
-                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                            <label for="nome">Seu nome *</label>
+                            <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Ex.: João">
                         </div>
+
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                            <label for="empresa">Empresa</label>
+                            <input id="empresa" name="empresa" type="text" autocomplete="organization" placeholder="Nome da empresa">
                         </div>
+
                         <div class="form-group">
-                            <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+                            <label for="quantidade">Quantidade aproximada</label>
+                            <input id="quantidade" name="quantidade" type="text" inputmode="numeric" placeholder="Ex.: 10.000 panfletos">
                         </div>
+
                         <div class="form-group">
-                            <select id="servico" name="servico" required>
-                                <option value="">Selecione o serviço</option>
-                                <option value="panfletagem-fisica">Panfletagem Física</option>
-                                <option value="panfletagem-digital">Panfletagem Digital</option>
-                                <option value="ambos">Ambos os serviços</option>
+                            <label for="regiao">Cidade / região *</label>
+                            <input id="regiao" name="regiao" type="text" required placeholder="Ex.: Curitiba / Boqueirão">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tipo">Tipo de distribuição</label>
+                            <select id="tipo" name="tipo">
+                                <option value="Ainda não sei">Ainda não sei</option>
+                                <option value="Porta a porta">Porta a porta</option>
+                                <option value="Pontos estratégicos">Pontos estratégicos</option>
+                                <option value="Entrega direta em mãos">Entrega direta em mãos</option>
+                                <option value="Grande volume / múltiplas regiões">Grande volume / múltiplas regiões</option>
                             </select>
                         </div>
+
                         <div class="form-group">
-                            <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="4" required></textarea>
+                            <label for="data">Data prevista</label>
+                            <input id="data" name="data" type="date">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                    </form>
+
+                        <div class="form-group full">
+                            <label for="observacoes">Observações</label>
+                            <textarea id="observacoes" name="observacoes" rows="4" placeholder="Conte qualquer informação adicional sobre a campanha."></textarea>
+                        </div>
+
+                        <div class="form-group full">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                Receber orçamento no WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="form-note">Ao enviar, você será direcionado ao WhatsApp da GN Panfletagem com os dados preenchidos.</p>
+                </form>
+            </div>
+        </section>
+
+        <section class="section alt" id="faq">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="eyebrow">Dúvidas frequentes</span>
+                    <h2>Antes de solicitar sua proposta</h2>
+                </div>
+
+                <div class="faq">
+                    <details>
+                        <summary>A GN atende toda a Região Metropolitana de Curitiba?</summary>
+                        <p>Sim. Realizamos operações em Curitiba e nos municípios da Região Metropolitana, conforme planejamento da campanha.</p>
+                    </details>
+
+                    <details>
+                        <summary>Vocês realizam panfletagem porta a porta?</summary>
+                        <p>Sim. Também realizamos ações em áreas comerciais, pontos estratégicos e entrega direta ao público.</p>
+                    </details>
+
+                    <details>
+                        <summary>É possível contratar distribuição em mais de uma cidade?</summary>
+                        <p>Sim. Podemos estruturar operações envolvendo diferentes regiões e municípios da RMC.</p>
+                    </details>
+
+                    <details>
+                        <summary>Como é definido o valor da panfletagem?</summary>
+                        <p>O orçamento é elaborado de acordo com fatores como quantidade de materiais, região, formato da distribuição, prazo e estrutura necessária para a operação.</p>
+                    </details>
+
+                    <details>
+                        <summary>Como solicitar um orçamento?</summary>
+                        <p>Preencha o formulário acima ou entre diretamente em contato pelo WhatsApp informando quantidade, região e data prevista da ação.</p>
+                    </details>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="img/logo.png" alt="G&N Panfletagem" class="footer-logo">
-                    <p class="footer-description">
-                        Divulgando o seu sucesso através de estratégias eficazes de panfletagem física e digital.
+            <div class="footer-grid">
+                <div>
+                    <img src="img/logo.png" alt="GN Panfletagem" class="footer-logo">
+                    <p>
+                        Panfletagem e distribuição profissional em Curitiba e toda a Região Metropolitana. Sua marca nas ruas certas.
                     </p>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Links Rápidos</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
+
+                <div>
+                    <h4>Navegação</h4>
+                    <ul>
                         <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#como-funciona">Como funciona</a></li>
+                        <li><a href="#cobertura">Cobertura</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#orcamento">Orçamento</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-section">
+
+                <div>
                     <h4>Contato</h4>
-                    <div class="footer-contact">
-                        <p><i class="fab fa-whatsapp"></i> (41) 98441-0350</p>
-                        <p><i class="fas fa-envelope"></i> contatogndivulgacao@gmail.com</p>
-                    </div>
+                    <ul>
+                        <li><a href="https://wa.me/5541984410350" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> (41) 98441-0350</a></li>
+                        <li><a href="mailto:contatogndivulgacao@gmail.com"><i class="fa-regular fa-envelope"></i> contatogndivulgacao@gmail.com</a></li>
+                        <li><a href="https://www.instagram.com/gnpanfletagem/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @gnpanfletagem</a></li>
+                    </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2025 G&N Panfletagem. Todos os direitos reservados.</p>
+                <span>&copy; <span id="currentYear"></span> GN Panfletagem. Todos os direitos reservados.</span>
+                <span>Curitiba e Região Metropolitana do Paraná</span>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <a class="floating-wa"
+       href="https://wa.me/5541984410350?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20panfletagem."
+       target="_blank"
+       rel="noopener"
+       aria-label="Falar com a GN Panfletagem no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("navMenu");
+
+        hamburger.addEventListener("click", () => {
+            const isOpen = navMenu.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        document.querySelectorAll(".nav-link").forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("open");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+        document.getElementById("quoteForm").addEventListener("submit", function(event){
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value.trim();
+            const empresa = document.getElementById("empresa").value.trim() || "Não informado";
+            const quantidade = document.getElementById("quantidade").value.trim() || "A definir";
+            const regiao = document.getElementById("regiao").value.trim();
+            const tipo = document.getElementById("tipo").value;
+            const data = document.getElementById("data").value || "A definir";
+            const observacoes = document.getElementById("observacoes").value.trim() || "Nenhuma";
+
+            const mensagem = [
+                "Olá! Gostaria de solicitar um orçamento com a GN Panfletagem.",
+                "",
+                `Nome: ${nome}`,
+                `Empresa: ${empresa}`,
+                `Quantidade aproximada: ${quantidade}`,
+                `Cidade / região: ${regiao}`,
+                `Tipo de distribuição: ${tipo}`,
+                `Data prevista: ${data}`,
+                `Observações: ${observacoes}`
+            ].join("\n");
+
+            const url = "https://wa.me/5541984410350?text=" + encodeURIComponent(mensagem);
+            window.open(url, "_blank", "noopener");
+        });
+    </script>
 </body>
 </html>
-
