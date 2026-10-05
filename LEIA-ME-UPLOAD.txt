@@ -1,0 +1,28 @@
+GN PANFLETAGEM - PACOTE PRONTO PARA GITHUB PAGES
+
+IMPORTANTE: mantenha exatamente esta estrutura no repositório:
+
+/index.html
+/css/styles.css
+/js/script.js
+/img/logo.png
+/img/hero-gn.jpg
+/img/sobre-gn.jpg
+/img/acao-01.jpg
+/img/acao-02.jpg
+/img/acao-03.jpg
+/img/acao-04.jpg
+/img/acao-05.jpg
+/img/acao-06.jpg
+/img/acao-07.jpg
+/img/acao-08.jpg
+
+PASSO A PASSO NO GITHUB:
+1. Substitua o index.html da raiz pelo index.html deste pacote.
+2. Abra a pasta css e substitua styles.css.
+3. Abra a pasta js e substitua script.js.
+4. Abra a pasta img e envie TODOS os arquivos da pasta img deste pacote.
+5. Os nomes precisam ficar exatamente iguais, incluindo hífen, números e extensão.
+6. Depois do commit, aguarde o GitHub Pages publicar e atualize o site com Ctrl+F5.
+
+Se apenas o index.html for enviado e as imagens não forem enviadas para /img, elas NÃO aparecerão.
