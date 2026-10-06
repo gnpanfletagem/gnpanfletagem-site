@@ -1,0 +1,21 @@
+ESTES ARQUIVOS DEVEM FICAR DENTRO DA PASTA img DO REPOSITÓRIO:
+
+img/logo.png
+img/hero-gn.jpg
+img/sobre-gn.jpg
+img/acao-01.jpg
+img/acao-02.jpg
+img/acao-03.jpg
+img/acao-04.jpg
+img/acao-05.jpg
+img/acao-06.jpg
+img/acao-07.jpg
+img/acao-08.jpg
+
+IMPORTANTE:
+- GitHub diferencia maiúsculas e minúsculas.
+- Não renomeie os arquivos.
+- Não envie os JPGs para a raiz do repositório; eles precisam ficar dentro de img/.
+- Depois do commit, abra por exemplo:
+  https://gnpanfletagem.github.io/gnpanfletagem-site/img/hero-gn.jpg
+  Se a foto abrir sozinha, o caminho está correto.
